@@ -1,0 +1,16 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Dependency directory
+node_modules
+
+# compiled output
+dist
+
+# Coverage
+.nyc_output
+coverage
+
+# SonarQube Scanner
+.scannerwork

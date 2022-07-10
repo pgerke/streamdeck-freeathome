@@ -1,0 +1,42 @@
+{
+  "Actions": [
+    {
+      "Icon": "images/action1.icon",
+      "Name": "Test Action",
+      "States": [
+        {
+          "Image": "images/action1.key",
+          "TitleAlignment": "middle",
+          "FontSize": "16"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Tooltip": "Just a test action to check the correct operation of the plugin",
+      "UUID": "com.philipgerke.freeathome.test"
+    }
+  ],
+  "SDKVersion": 2,
+  "Author": "Philip Gerke",
+  "Category": "Philip Gerke",
+  "CategoryIcon": "images/categoryIcon",
+  "Description": "Enables you to control your free@home accessories with your Elgato Stream Deck",
+  "CodePath": "plugin.html",
+  "PropertyInspectorPath": "propertyInspector.html",
+  "Name": "free@home",
+  "Icon": "images/pluginIcon",
+  "URL": "https://github.com/pgerke/streamdeck-freeathome/",
+  "Version": "0.1.0-pre.1",
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "4.1"
+  }
+}

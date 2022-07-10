@@ -1,0 +1,8 @@
+.github
+.vscode
+coverage
+dist
+docs
+node_modules
+package-lock.json
+webpack.*.config.js
