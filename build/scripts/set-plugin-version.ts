@@ -3,27 +3,22 @@ import { readFileSync, writeFileSync } from "jsonfile";
 import { join, relative } from "path";
 import { manifestNs } from "./manifest";
 
-const version = process.argv[2];
+let version = process.argv[2];
 if (version === undefined) {
-  console.error("\n❌ Usage: npm run set-plugin-version <VERSION>\n");
-  process.exit();
+  const pkg: { version: string } = readFileSync(join(__dirname, "../../package.json")) as {
+    version: string;
+  };
+  console.error("⚠️ No version supplied, extracting version from package.json");
+  version = pkg.version.substring(0, pkg.version.indexOf("-"));
 }
 
-let manifestPath: string = join(
-  __dirname,
-  "../../dist/" + manifestNs + ".sdPlugin/manifest.json"
-);
+let manifestPath: string = join(__dirname, "../../dist/" + manifestNs + ".sdPlugin/manifest.json");
 if (!existsSync(manifestPath)) {
-  manifestPath = join(
-    __dirname,
-    "../../dist/dev." + manifestNs + ".sdPlugin/manifest.json"
-  );
+  manifestPath = join(__dirname, "../../dist/dev." + manifestNs + ".sdPlugin/manifest.json");
 }
 
 if (!existsSync(manifestPath)) {
-  console.error(
-    "❌ could not find manifest.json in prod OR dev dist directories"
-  );
+  console.error("❌ could not find manifest.json in prod OR dev dist directories");
   process.exit(1);
 }
 

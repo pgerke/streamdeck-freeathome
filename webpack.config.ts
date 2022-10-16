@@ -1,16 +1,10 @@
 import { resolve } from "path";
 import { Configuration } from "webpack";
-import {
-  createDevelopmentManifest,
-  manifestNs,
-} from "./build/scripts/manifest";
+import { createDevelopmentManifest, manifestNs } from "./build/scripts/manifest";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import copyWebpackPlugin from "copy-webpack-plugin";
 
-export default (
-  environment: unknown,
-  options: { mode: string; env: unknown }
-): Configuration => {
+export default (environment: unknown, options: { mode: string; env: unknown }): Configuration => {
   let pluginNs = manifestNs;
 
   if (options.mode === "development") {
@@ -36,10 +30,7 @@ export default (
             to: resolve(__dirname, "dist/" + pluginNs + ".sdPlugin"),
             toType: "dir",
             transform: (content, path) => {
-              if (
-                options.mode === "development" &&
-                /manifest\.json$/.test(path)
-              ) {
+              if (options.mode === "development" && /manifest\.json$/.test(path)) {
                 return createDevelopmentManifest();
               }
               if (!/\.html/.test(path)) {
