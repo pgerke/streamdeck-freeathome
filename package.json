@@ -1,6 +1,6 @@
 {
   "name": "streamdeck-freeathome",
-  "version": "0.1.0-pre.2",
+  "version": "0.1.0-pre.3",
   "preview": true,
   "description": "A plugin for the Elgato Stream Deck that interfaces with your BUSCH-JAEGER free@home smart home system",
   "repository": {
@@ -50,24 +50,24 @@
     "distribute": "npm run build:prod && npm run set-plugin-version && npm run bundle"
   },
   "dependencies": {
-    "@rweich/streamdeck-ts": "^4.0.3"
+    "@rweich/streamdeck-ts": "^4.0.4"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/jasmine": "^4.3.0",
     "@types/jsonfile": "^6.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.40.0",
-    "@typescript-eslint/parser": "^5.40.0",
-    "babel-loader": "^8.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "babel-loader": "^9.1.0",
     "copy-webpack-plugin": "^11.0.0",
-    "eslint": "^8.25.0",
+    "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-n": "^15.5.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.1.0",
+    "eslint-plugin-promise": "^6.1.1",
     "fork-ts-checker-webpack-plugin": "^7.2.13",
-    "jasmine": "^4.4.0",
+    "jasmine": "^4.5.0",
     "jasmine-spec-reporter": "^7.0.0",
     "jsonfile": "^6.1.0",
     "nyc": "^15.1.0",
@@ -75,8 +75,8 @@
     "rimraf": "^3.0.2",
     "source-map-loader": "^4.0.1",
     "ts-node": "10.9.1",
-    "typescript": "^4.8.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "typescript": "~4.8.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
   }
 }
